@@ -12,6 +12,10 @@ export const creditApi = createApi({
           url: '/upload',
           method: 'POST',
           body: formData,
+          headers: {
+            // Explicitly set content type for form data
+            "Accept": "application/json",
+          },
         };
       },
     }),
